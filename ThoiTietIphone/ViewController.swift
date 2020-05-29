@@ -28,9 +28,11 @@ class ViewController: UIViewController {
         collectionViewTop.dataSource = self
         collectionViewBottom.delegate = self
         collectionViewBottom.dataSource = self
-        
+        collectionViewTop.showsHorizontalScrollIndicator = false
+        collectionViewBottom.showsVerticalScrollIndicator = false
         if let flowLayout = collectionViewTop.collectionViewLayout as? UICollectionViewFlowLayout{
             flowLayout.scrollDirection = .horizontal
+            
         }
         
         if let flowLayout = collectionViewBottom.collectionViewLayout as? UICollectionViewFlowLayout{
